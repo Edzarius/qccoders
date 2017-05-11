@@ -2,7 +2,7 @@ version: 1.0.0.{build}
 before_build:
 - cmd: nuget restore
 build:
-  project: ConsoleApp1.sln
+  project: ConsoleApplication2.sln
   verbosity: minimal
 test_script:
 - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"C:\Projects\ConsoleApplication2\letscode\bin\Debug\letscode.dll -noshadow -appveyor" -returntargetcode -filter:"+[*]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\coverage.xml
