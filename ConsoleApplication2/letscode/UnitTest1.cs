@@ -1,14 +1,23 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace letscode
 {
-    [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
+        #region Public Methods
+        [Fact]
+        public void PassingTest()
         {
+            Assert.Equal(1, 1);
         }
+
+        [Fact]
+        public void FailingTest()
+        {
+            Assert.Equal(1, 2);
+        }
+        #endregion Public Methods
+
     }
 }
